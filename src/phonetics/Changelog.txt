@@ -1,0 +1,24 @@
+[25 JUN]
+1) Changed GenerateRandomChar Class to generateRandomChar method.
+
+2) Moved char_And_Its_telephonyCode from main to Constructor.
+
+3) Made some Minor changes to make program error free.
+
+COMMENTS
+* [ done myself] Move TelephonyCodeStore to new class also it shoudn't me static
+* [TODO] Move map to private variable inside TelephonyCodeStore.
+* [TODO] expose a getter for the above private variable. Eclipse can automatically do it.
+* [TODO] import TelephonyCodeStore in Phonetics.java
+* [ done myself]generateRandomChar shoudn't be static
+* [done myself] extract out Main Application class. This only has main method nothing else.
+* [TODO] add necessary imports to Main Application class
+* [TODO] generateRandomChar method should return a `char` instead of `void`
+============================
+[9 JULY]
+TODO :
+* Move TelephonyCodeStore map population to new method called `init`.
+* Call  method `init` in constructor of  TelephonyCodeStore
+* `generateRandomChar` method should return a `char`. Do not use string builder and append. Instead just return the char
+* Note down the differences between `string` and `char`
+
