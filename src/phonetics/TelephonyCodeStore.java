@@ -4,16 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 class TelephonyCodeStore {
-    private Map<String, String> telephony = new HashMap<>();
+    private Map<Character, String> telephony = new HashMap<>();
 
-    TelephonyCodeStore() {
-        telephony.put("A", "Alfa");
-        telephony.put("B", "Bravo");
-        telephony.put("C", "Charlie");
-        telephony.put("D", "Delta");
-        telephony.put("E", "Echo");
-        telephony.put("F", "Foxtrot");
-        telephony.put("G", "Golf");
+    public void init() {
+        telephony.put('A', "Alfa");
+        telephony.put('B', "Bravo");
+        telephony.put('C', "Charlie");
+        telephony.put('D', "Delta");
+        telephony.put('E', "Echo");
+        telephony.put('F', "Foxtrot");
+        telephony.put('G', "Golf");
+        // FIX like this. '' is for char. and "" is for string
         telephony.put("H", "Hotel");
         telephony.put("I", "India");
         telephony.put("J", "Juliett");
@@ -43,14 +44,17 @@ class TelephonyCodeStore {
         telephony.put("8", "Eight");
         telephony.put("9", "Nine");
         telephony.put("0", "Zero");
-
     }
 
-    public Map<String, String> getTelephony() {
+    TelephonyCodeStore() {
+        this.init();
+    }
+
+    public Map<Character, String> getTelephony() {
         return telephony;
     }
 
-    public boolean isMatch(String code, String tel) {
+    public boolean isMatch(char code, String tel) {
         return telephony.get(code).equals(tel);
     }
 }
